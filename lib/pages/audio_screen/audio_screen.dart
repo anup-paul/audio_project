@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
+import 'package:flutter/material.dart';
 
 class AudioScreeen extends StatefulWidget {
   const AudioScreeen({super.key, this.title});
@@ -25,15 +25,20 @@ class _AudioScreeenState extends State<AudioScreeen> {
         children: [
           InkWell(
             onTap: () {
-              player.play(AssetSource('assets/number_seven.mp3'));
-              print(AssetSource("assets/number_seven.mp3"));
+              player.play(AssetSource('number_seven.mp3'));
+              //print(AssetSource("assets/number_seven.mp3"));
             },
             child: const DigitWidget(
               title: "1",
             ),
           ),
-          const DigitWidget(
-            title: "2",
+          InkWell(
+            onTap: () {
+              player.play(AssetSource('number_seven.mp3'));
+            },
+            child: const DigitWidget(
+              title: "2",
+            ),
           ),
           const DigitWidget(
             title: "3",
