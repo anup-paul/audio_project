@@ -16,28 +16,29 @@ class _AudioScreeenState extends State<AudioScreeen> {
   final player1 = AudioPlayer();
   final player2 = AudioPlayer();
   final player3 = AudioPlayer();
+  final player4 = AudioPlayer();
+  final player5 = AudioPlayer();
+  final player6 = AudioPlayer();
+  final player7 = AudioPlayer();
+  final player8 = AudioPlayer();
+  final player9 = AudioPlayer();
+  final initPlayer = AudioPlayer();
   Timer? timer;
   bool istrue = true;
 
   void audioOnInit() {
     print("/........................$istrue");
     if (istrue == true) {
-      player3.play(AssetSource("cartoon-intro-13087.mp3"));
-      player3.onPlayerComplete.listen((event) {
+      initPlayer.play(AssetSource("cartoon-intro-13087.mp3"));
+      initPlayer.onPlayerComplete.listen((event) {
         Timer.periodic(const Duration(seconds: 10), (timer) {
           audioOnInit();
         });
       });
     } else {
-      player3.stop();
+      initPlayer.stop();
     }
   }
-
-  // final periodicTimer = Timer.periodic(const Duration(seconds: 20), (timer) {
-  //   audioOnInit();
-  // });
-
-  //final audiostart = true;
 
   @override
   void initState() {
@@ -45,12 +46,6 @@ class _AudioScreeenState extends State<AudioScreeen> {
     super.initState();
     audioOnInit();
   }
-
-  // void dispose() {
-  //   //...
-  //   super.dispose();
-  //   //...
-  // }
 
   @override
   Widget build(BuildContext context) {
@@ -64,8 +59,7 @@ class _AudioScreeenState extends State<AudioScreeen> {
         children: [
           InkWell(
             onTap: () {
-              player3.stop();
-
+              initPlayer.stop();
               setState(() {
                 istrue = false;
               });
@@ -80,32 +74,123 @@ class _AudioScreeenState extends State<AudioScreeen> {
           ),
           InkWell(
             onTap: () {
-              player2.play(AssetSource('number_seven.mp3'));
+              initPlayer.stop();
+              setState(() {
+                istrue = false;
+              });
+              player1.play(AssetSource('number_seven.mp3'));
+              player1.onPlayerComplete.listen((event) {
+                player1.stop();
+              });
             },
             child: const DigitWidget(
               title: "2",
             ),
           ),
-          const DigitWidget(
-            title: "3",
+          InkWell(
+            onTap: () {
+              initPlayer.stop();
+              setState(() {
+                istrue = false;
+              });
+              player1.play(AssetSource('number_seven.mp3'));
+              player1.onPlayerComplete.listen((event) {
+                player1.stop();
+              });
+            },
+            child: const DigitWidget(
+              title: "3",
+            ),
           ),
-          const DigitWidget(
-            title: "4",
+          InkWell(
+            onTap: () {
+              initPlayer.stop();
+              setState(() {
+                istrue = false;
+              });
+              player1.play(AssetSource('number_seven.mp3'));
+              player1.onPlayerComplete.listen((event) {
+                player1.stop();
+              });
+            },
+            child: const DigitWidget(
+              title: "4",
+            ),
           ),
-          const DigitWidget(
-            title: "5",
+          InkWell(
+            onTap: () {
+              initPlayer.stop();
+              setState(() {
+                istrue = false;
+              });
+              player1.play(AssetSource('number_seven.mp3'));
+              player1.onPlayerComplete.listen((event) {
+                player1.stop();
+              });
+            },
+            child: const DigitWidget(
+              title: "5",
+            ),
           ),
-          const DigitWidget(
-            title: "6",
+          InkWell(
+            onTap: () {
+              initPlayer.stop();
+              setState(() {
+                istrue = false;
+              });
+              player1.play(AssetSource('number_seven.mp3'));
+              player1.onPlayerComplete.listen((event) {
+                player1.stop();
+              });
+            },
+            child: const DigitWidget(
+              title: "6",
+            ),
           ),
-          const DigitWidget(
-            title: "7",
+          InkWell(
+            onTap: () {
+              initPlayer.stop();
+              setState(() {
+                istrue = false;
+              });
+              player1.play(AssetSource('number_seven.mp3'));
+              player1.onPlayerComplete.listen((event) {
+                player1.stop();
+              });
+            },
+            child: const DigitWidget(
+              title: "7",
+            ),
           ),
-          const DigitWidget(
-            title: "8",
+          InkWell(
+            onTap: () {
+              initPlayer.stop();
+              setState(() {
+                istrue = false;
+              });
+              player1.play(AssetSource('number_seven.mp3'));
+              player1.onPlayerComplete.listen((event) {
+                player1.stop();
+              });
+            },
+            child: const DigitWidget(
+              title: "8",
+            ),
           ),
-          const DigitWidget(
-            title: "9",
+          InkWell(
+            onTap: () {
+              initPlayer.stop();
+              setState(() {
+                istrue = false;
+              });
+              player1.play(AssetSource('number_seven.mp3'));
+              player1.onPlayerComplete.listen((event) {
+                player1.stop();
+              });
+            },
+            child: const DigitWidget(
+              title: "9",
+            ),
           )
         ],
       ),
