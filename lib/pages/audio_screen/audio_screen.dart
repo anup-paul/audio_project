@@ -1,8 +1,10 @@
+import 'dart:async';
+
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
 class AudioScreeen extends StatefulWidget {
-  const AudioScreeen({super.key, this.title});
+  AudioScreeen({super.key, this.title});
 
   final String? title;
 
@@ -11,7 +13,44 @@ class AudioScreeen extends StatefulWidget {
 }
 
 class _AudioScreeenState extends State<AudioScreeen> {
-  final player = AudioPlayer();
+  final player1 = AudioPlayer();
+  final player2 = AudioPlayer();
+  final player3 = AudioPlayer();
+  Timer? timer;
+  bool istrue = true;
+
+  void audioOnInit() {
+    print("/........................$istrue");
+    if (istrue == true) {
+      player3.play(AssetSource("cartoon-intro-13087.mp3"));
+      player3.onPlayerComplete.listen((event) {
+        Timer.periodic(const Duration(seconds: 10), (timer) {
+          audioOnInit();
+        });
+      });
+    } else {
+      player3.stop();
+    }
+  }
+
+  // final periodicTimer = Timer.periodic(const Duration(seconds: 20), (timer) {
+  //   audioOnInit();
+  // });
+
+  //final audiostart = true;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    audioOnInit();
+  }
+
+  // void dispose() {
+  //   //...
+  //   super.dispose();
+  //   //...
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -25,8 +64,15 @@ class _AudioScreeenState extends State<AudioScreeen> {
         children: [
           InkWell(
             onTap: () {
-              player.play(AssetSource('number_seven.mp3'));
-              //print(AssetSource("assets/number_seven.mp3"));
+              player3.stop();
+
+              setState(() {
+                istrue = false;
+              });
+              player1.play(AssetSource('number_seven.mp3'));
+              player1.onPlayerComplete.listen((event) {
+                player1.stop();
+              });
             },
             child: const DigitWidget(
               title: "1",
@@ -34,7 +80,7 @@ class _AudioScreeenState extends State<AudioScreeen> {
           ),
           InkWell(
             onTap: () {
-              player.play(AssetSource('number_seven.mp3'));
+              player2.play(AssetSource('number_seven.mp3'));
             },
             child: const DigitWidget(
               title: "2",
@@ -89,3 +135,12 @@ class DigitWidget extends StatelessWidget {
     );
   }
 }
+
+// class InitialRecording extends StatelessWidget {
+//   const InitialRecording({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return 
+//   }
+// }
