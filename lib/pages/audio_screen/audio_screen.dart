@@ -99,9 +99,9 @@ class _AudioScreeenState extends State<AudioScreeen> {
                         setState(() {
                           istrue = false;
                         });
-                        player1.play(AssetSource('number_seven.mp3'));
-                        player1.onPlayerComplete.listen((event) {
-                          player1.stop();
+                        player2.play(AssetSource('number_seven.mp3'));
+                        player2.onPlayerComplete.listen((event) {
+                          player2.stop();
                         });
                       },
                       child: const DigitWidget(
@@ -114,9 +114,9 @@ class _AudioScreeenState extends State<AudioScreeen> {
                         setState(() {
                           istrue = false;
                         });
-                        player1.play(AssetSource('number_seven.mp3'));
-                        player1.onPlayerComplete.listen((event) {
-                          player1.stop();
+                        player3.play(AssetSource('number_seven.mp3'));
+                        player3.onPlayerComplete.listen((event) {
+                          player3.stop();
                         });
                       },
                       child: const DigitWidget(
@@ -129,9 +129,9 @@ class _AudioScreeenState extends State<AudioScreeen> {
                         setState(() {
                           istrue = false;
                         });
-                        player1.play(AssetSource('number_seven.mp3'));
-                        player1.onPlayerComplete.listen((event) {
-                          player1.stop();
+                        player4.play(AssetSource('number_seven.mp3'));
+                        player4.onPlayerComplete.listen((event) {
+                          player4.stop();
                         });
                       },
                       child: const DigitWidget(
@@ -144,9 +144,9 @@ class _AudioScreeenState extends State<AudioScreeen> {
                         setState(() {
                           istrue = false;
                         });
-                        player1.play(AssetSource('number_seven.mp3'));
-                        player1.onPlayerComplete.listen((event) {
-                          player1.stop();
+                        player5.play(AssetSource('number_seven.mp3'));
+                        player5.onPlayerComplete.listen((event) {
+                          player5.stop();
                         });
                       },
                       child: const DigitWidget(
@@ -159,9 +159,9 @@ class _AudioScreeenState extends State<AudioScreeen> {
                         setState(() {
                           istrue = false;
                         });
-                        player1.play(AssetSource('number_seven.mp3'));
-                        player1.onPlayerComplete.listen((event) {
-                          player1.stop();
+                        player6.play(AssetSource('number_seven.mp3'));
+                        player6.onPlayerComplete.listen((event) {
+                          player6.stop();
                         });
                       },
                       child: const DigitWidget(
@@ -174,9 +174,9 @@ class _AudioScreeenState extends State<AudioScreeen> {
                         setState(() {
                           istrue = false;
                         });
-                        player1.play(AssetSource('number_seven.mp3'));
-                        player1.onPlayerComplete.listen((event) {
-                          player1.stop();
+                        player7.play(AssetSource('number_seven.mp3'));
+                        player7.onPlayerComplete.listen((event) {
+                          player7.stop();
                         });
                       },
                       child: const DigitWidget(
@@ -189,9 +189,9 @@ class _AudioScreeenState extends State<AudioScreeen> {
                         setState(() {
                           istrue = false;
                         });
-                        player1.play(AssetSource('number_seven.mp3'));
-                        player1.onPlayerComplete.listen((event) {
-                          player1.stop();
+                        player8.play(AssetSource('number_seven.mp3'));
+                        player8.onPlayerComplete.listen((event) {
+                          player8.stop();
                         });
                       },
                       child: const DigitWidget(
@@ -204,9 +204,9 @@ class _AudioScreeenState extends State<AudioScreeen> {
                         setState(() {
                           istrue = false;
                         });
-                        player1.play(AssetSource('number_seven.mp3'));
-                        player1.onPlayerComplete.listen((event) {
-                          player1.stop();
+                        player9.play(AssetSource('number_seven.mp3'));
+                        player9.onPlayerComplete.listen((event) {
+                          player9.stop();
                         });
                       },
                       child: const DigitWidget(
