@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
@@ -13,22 +12,14 @@ class AudioScreeen extends StatefulWidget {
 }
 
 class _AudioScreeenState extends State<AudioScreeen> {
-  final player1 = AudioPlayer();
-  final player2 = AudioPlayer();
-  final player3 = AudioPlayer();
-  final player4 = AudioPlayer();
-  final player5 = AudioPlayer();
-  final player6 = AudioPlayer();
-  final player7 = AudioPlayer();
-  final player8 = AudioPlayer();
-  final player9 = AudioPlayer();
+  final player = AudioPlayer();
   final initPlayer = AudioPlayer();
   Timer? timer;
-  bool istrue = true;
+  bool isTrue = true;
 
   void audioOnInit() {
-    print("/........................$istrue");
-    if (istrue == true) {
+    print("/........................$isTrue");
+    if (isTrue == true) {
       initPlayer.play(AssetSource("cartoon-intro-13087.mp3"));
       initPlayer.onPlayerComplete.listen((event) {
         Timer.periodic(const Duration(seconds: 10), (timer) {
@@ -42,7 +33,6 @@ class _AudioScreeenState extends State<AudioScreeen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     audioOnInit();
   }
@@ -56,15 +46,26 @@ class _AudioScreeenState extends State<AudioScreeen> {
           elevation: 0,
         ),
         body: Padding(
-          padding: const EdgeInsets.all(20.0),
+          padding: const EdgeInsets.all(16.0),
           child: Column(
             children: [
               const Text(
-                "Lorem LoremLorem Lorem Lorem Loregergem Lorem Lorem Lodfgfdgoegergerem Lorem Lorem ",
+                'Test 1 of 4',
                 textAlign: TextAlign.justify,
                 style: TextStyle(
                     color: Colors.black,
-                    fontSize: 16,
+                    fontSize: 22.0,
+                    fontWeight: FontWeight.bold),
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.01,
+              ),
+              const Text(
+                'Please press the numbers in this sequence 4 7 3 5 8 and click next',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 18.0,
                     fontWeight: FontWeight.bold),
               ),
               SizedBox(
@@ -82,11 +83,11 @@ class _AudioScreeenState extends State<AudioScreeen> {
                       onTap: () {
                         initPlayer.stop();
                         setState(() {
-                          istrue = false;
+                          isTrue = false;
                         });
-                        player1.play(AssetSource('number_seven.mp3'));
-                        player1.onPlayerComplete.listen((event) {
-                          player1.stop();
+                        player.play(AssetSource('number_seven.mp3'));
+                        player.onPlayerComplete.listen((event) {
+                          player.stop();
                         });
                       },
                       child: const DigitWidget(
@@ -97,11 +98,11 @@ class _AudioScreeenState extends State<AudioScreeen> {
                       onTap: () {
                         initPlayer.stop();
                         setState(() {
-                          istrue = false;
+                          isTrue = false;
                         });
-                        player2.play(AssetSource('number_seven.mp3'));
-                        player2.onPlayerComplete.listen((event) {
-                          player2.stop();
+                        player.play(AssetSource('number_seven.mp3'));
+                        player.onPlayerComplete.listen((event) {
+                          player.stop();
                         });
                       },
                       child: const DigitWidget(
@@ -112,11 +113,11 @@ class _AudioScreeenState extends State<AudioScreeen> {
                       onTap: () {
                         initPlayer.stop();
                         setState(() {
-                          istrue = false;
+                          isTrue = false;
                         });
-                        player3.play(AssetSource('number_seven.mp3'));
-                        player3.onPlayerComplete.listen((event) {
-                          player3.stop();
+                        player.play(AssetSource('number_seven.mp3'));
+                        player.onPlayerComplete.listen((event) {
+                          player.stop();
                         });
                       },
                       child: const DigitWidget(
@@ -127,11 +128,11 @@ class _AudioScreeenState extends State<AudioScreeen> {
                       onTap: () {
                         initPlayer.stop();
                         setState(() {
-                          istrue = false;
+                          isTrue = false;
                         });
-                        player4.play(AssetSource('number_seven.mp3'));
-                        player4.onPlayerComplete.listen((event) {
-                          player4.stop();
+                        player.play(AssetSource('number_seven.mp3'));
+                        player.onPlayerComplete.listen((event) {
+                          player.stop();
                         });
                       },
                       child: const DigitWidget(
@@ -142,11 +143,11 @@ class _AudioScreeenState extends State<AudioScreeen> {
                       onTap: () {
                         initPlayer.stop();
                         setState(() {
-                          istrue = false;
+                          isTrue = false;
                         });
-                        player5.play(AssetSource('number_seven.mp3'));
-                        player5.onPlayerComplete.listen((event) {
-                          player5.stop();
+                        player.play(AssetSource('number_seven.mp3'));
+                        player.onPlayerComplete.listen((event) {
+                          player.stop();
                         });
                       },
                       child: const DigitWidget(
@@ -157,11 +158,11 @@ class _AudioScreeenState extends State<AudioScreeen> {
                       onTap: () {
                         initPlayer.stop();
                         setState(() {
-                          istrue = false;
+                          isTrue = false;
                         });
-                        player6.play(AssetSource('number_seven.mp3'));
-                        player6.onPlayerComplete.listen((event) {
-                          player6.stop();
+                        player.play(AssetSource('number_seven.mp3'));
+                        player.onPlayerComplete.listen((event) {
+                          player.stop();
                         });
                       },
                       child: const DigitWidget(
@@ -172,11 +173,11 @@ class _AudioScreeenState extends State<AudioScreeen> {
                       onTap: () {
                         initPlayer.stop();
                         setState(() {
-                          istrue = false;
+                          isTrue = false;
                         });
-                        player7.play(AssetSource('number_seven.mp3'));
-                        player7.onPlayerComplete.listen((event) {
-                          player7.stop();
+                        player.play(AssetSource('number_seven.mp3'));
+                        player.onPlayerComplete.listen((event) {
+                          player.stop();
                         });
                       },
                       child: const DigitWidget(
@@ -187,11 +188,11 @@ class _AudioScreeenState extends State<AudioScreeen> {
                       onTap: () {
                         initPlayer.stop();
                         setState(() {
-                          istrue = false;
+                          isTrue = false;
                         });
-                        player8.play(AssetSource('number_seven.mp3'));
-                        player8.onPlayerComplete.listen((event) {
-                          player8.stop();
+                        player.play(AssetSource('number_seven.mp3'));
+                        player.onPlayerComplete.listen((event) {
+                          player.stop();
                         });
                       },
                       child: const DigitWidget(
@@ -202,22 +203,38 @@ class _AudioScreeenState extends State<AudioScreeen> {
                       onTap: () {
                         initPlayer.stop();
                         setState(() {
-                          istrue = false;
+                          isTrue = false;
                         });
-                        player9.play(AssetSource('number_seven.mp3'));
-                        player9.onPlayerComplete.listen((event) {
-                          player9.stop();
+                        player.play(AssetSource('number_seven.mp3'));
+                        player.onPlayerComplete.listen((event) {
+                          player.stop();
                         });
                       },
                       child: const DigitWidget(
                         title: "9",
                       ),
-                    )
+                    ),
+                    const SizedBox.shrink(),
+                    InkWell(
+                      onTap: () {
+                        initPlayer.stop();
+                        setState(() {
+                          isTrue = false;
+                        });
+                        player.play(AssetSource('number_seven.mp3'));
+                        player.onPlayerComplete.listen((event) {
+                          player.stop();
+                        });
+                      },
+                      child: const DigitWidget(
+                        title: "0",
+                      ),
+                    ),
                   ],
                 ),
               ),
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.02,
+                height: MediaQuery.of(context).size.height * 0.04,
               ),
               InkWell(
                 onTap: () {},
@@ -255,8 +272,7 @@ class DigitWidget extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(2),
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(8),
-          color: const Color.fromARGB(255, 26, 34, 47)),
+          borderRadius: BorderRadius.circular(8), color: Colors.grey),
       child: Center(
         child: Text(
           title!,
@@ -267,12 +283,3 @@ class DigitWidget extends StatelessWidget {
     );
   }
 }
-
-// class InitialRecording extends StatelessWidget {
-//   const InitialRecording({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return 
-//   }
-// }
