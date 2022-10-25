@@ -20,7 +20,7 @@ class _AudioScreeenState extends State<AudioScreeen> {
   void audioOnInit() {
     print("/........................$isTrue");
     if (isTrue == true) {
-      initPlayer.play(AssetSource("cartoon-intro-13087.mp3"));
+      initPlayer.play(AssetSource("intro-instruction.mp3"));
       initPlayer.onPlayerComplete.listen((event) {
         Timer.periodic(const Duration(seconds: 10), (timer) {
           audioOnInit();
@@ -85,7 +85,7 @@ class _AudioScreeenState extends State<AudioScreeen> {
                         setState(() {
                           isTrue = false;
                         });
-                        player.play(AssetSource('number_seven.mp3'));
+                        player.play(AssetSource('00.mp3'));
                         player.onPlayerComplete.listen((event) {
                           player.stop();
                         });
@@ -100,7 +100,7 @@ class _AudioScreeenState extends State<AudioScreeen> {
                         setState(() {
                           isTrue = false;
                         });
-                        player.play(AssetSource('number_seven.mp3'));
+                        player.play(AssetSource('02.mp3'));
                         player.onPlayerComplete.listen((event) {
                           player.stop();
                         });
@@ -115,7 +115,7 @@ class _AudioScreeenState extends State<AudioScreeen> {
                         setState(() {
                           isTrue = false;
                         });
-                        player.play(AssetSource('number_seven.mp3'));
+                        player.play(AssetSource('03.mp3'));
                         player.onPlayerComplete.listen((event) {
                           player.stop();
                         });
@@ -130,7 +130,7 @@ class _AudioScreeenState extends State<AudioScreeen> {
                         setState(() {
                           isTrue = false;
                         });
-                        player.play(AssetSource('number_seven.mp3'));
+                        player.play(AssetSource('04.mp3'));
                         player.onPlayerComplete.listen((event) {
                           player.stop();
                         });
@@ -145,7 +145,7 @@ class _AudioScreeenState extends State<AudioScreeen> {
                         setState(() {
                           isTrue = false;
                         });
-                        player.play(AssetSource('number_seven.mp3'));
+                        player.play(AssetSource('05.mp3'));
                         player.onPlayerComplete.listen((event) {
                           player.stop();
                         });
@@ -160,7 +160,7 @@ class _AudioScreeenState extends State<AudioScreeen> {
                         setState(() {
                           isTrue = false;
                         });
-                        player.play(AssetSource('number_seven.mp3'));
+                        player.play(AssetSource('06.mp3'));
                         player.onPlayerComplete.listen((event) {
                           player.stop();
                         });
@@ -175,7 +175,7 @@ class _AudioScreeenState extends State<AudioScreeen> {
                         setState(() {
                           isTrue = false;
                         });
-                        player.play(AssetSource('number_seven.mp3'));
+                        player.play(AssetSource('07.mp3'));
                         player.onPlayerComplete.listen((event) {
                           player.stop();
                         });
@@ -190,7 +190,7 @@ class _AudioScreeenState extends State<AudioScreeen> {
                         setState(() {
                           isTrue = false;
                         });
-                        player.play(AssetSource('number_seven.mp3'));
+                        player.play(AssetSource('08.mp3'));
                         player.onPlayerComplete.listen((event) {
                           player.stop();
                         });
@@ -205,7 +205,7 @@ class _AudioScreeenState extends State<AudioScreeen> {
                         setState(() {
                           isTrue = false;
                         });
-                        player.play(AssetSource('number_seven.mp3'));
+                        player.play(AssetSource('09.mp3'));
                         player.onPlayerComplete.listen((event) {
                           player.stop();
                         });
@@ -221,7 +221,7 @@ class _AudioScreeenState extends State<AudioScreeen> {
                         setState(() {
                           isTrue = false;
                         });
-                        player.play(AssetSource('number_seven.mp3'));
+                        player.play(AssetSource('00.mp3'));
                         player.onPlayerComplete.listen((event) {
                           player.stop();
                         });
